@@ -42,5 +42,4 @@ public class Customer {
 		this.cardId = cardId;
 	}
 	
-	
 }
