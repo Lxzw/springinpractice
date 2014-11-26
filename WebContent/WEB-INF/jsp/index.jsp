@@ -7,13 +7,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <link rel="stylesheet" type="text/css" href="/css/global.css" >
+ <link rel="stylesheet" type="text/css" href="http://localhost:8080/springinpractice/css/global.css" >
 <title>首页</title>
 </head>
 <body>
 	<h2>Hello World</h2><hr/>
 	
-	<img alt="桥" src="/WEB-INF/img/bridge.jpg"/>
+	<img alt="桥" src="http://localhost:8080/springinpractice/img/bridge.jpg"/>
 	
 </body>
 </html>

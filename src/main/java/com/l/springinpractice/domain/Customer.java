@@ -17,7 +17,17 @@ public class Customer {
 	private String name;
 	
 	private String cardId;
-
+	
+	public Customer () {
+		
+	}
+	
+	public Customer(Integer id, String name, String cardId) {
+		this.id = id;
+		this.name = name;
+		this.cardId = cardId;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
