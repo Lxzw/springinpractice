@@ -2,7 +2,13 @@ package com.l.springinpractice.web;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.l.springinpractice.domain.Customer;
 
 /**
  * 
@@ -20,4 +26,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class UserManagerController {
 
+	@RequestMapping(value="/", method=RequestMethod.GET)
+	public ModelAndView viewRegisterPage(ModelMap model) {
+		Customer customer = new Customer();
+		return new ModelAndView("user/register").addObject(customer);
+	}
+	
+	@RequestMapping(value="/", method=RequestMethod.POST)
+	public String registerPage(Customer customer,MultipartFile image) {
+		System.err.println(customer.getName());
+		System.err.println(image.getContentType());
+		return "redirect:/";
+	}
+	
+	@RequestMapping(value="/file", method=RequestMethod.GET)
+	public ModelAndView viewRegisterPageWithFile(ModelMap model) {
+		Customer customer = new Customer();
+		return new ModelAndView("file/upload").addObject(customer);
+	}
 }
