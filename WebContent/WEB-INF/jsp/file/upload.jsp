@@ -14,7 +14,7 @@
 <body>
 		<hr/>
 	
-	<form:form method="post" action="/user/" modelAttribute="customer" enctype="multipart/form-data">
+	<form:form method="post" action="" modelAttribute="customer" enctype="multipart/form-data">
 	
 		身份证：<form:input path="cardId"/>
 		用户名：<form:input path="name"/>
