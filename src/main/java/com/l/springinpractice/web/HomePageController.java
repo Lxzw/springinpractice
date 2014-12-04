@@ -2,6 +2,10 @@ package com.l.springinpractice.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.l.springinpractice.domain.Account;
 
 /**
  * 
@@ -16,8 +20,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomePageController {
 	
+	Account account = new Account();
+	
 	@RequestMapping({"/","index","index.html","index.htm"})
-	public String index() {
-		return "index";
+	public ModelAndView index() {
+		return new ModelAndView("index").addObject(account);
+	}
+	
+	@RequestMapping(value={"/","index"},method=RequestMethod.POST)
+	public String login(Account account) {
+		
+		if (account.getUsername().trim().equals("jack")
+				&& account.getPassword().equals("123456")) {
+			
+			return "welcome";
+		} else {
+			
+			return "error";
+		}
+		
 	}
 }

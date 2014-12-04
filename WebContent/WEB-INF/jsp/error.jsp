@@ -18,16 +18,7 @@
 	
 	<hr/>
 	
-	<h2>用户登录</h2>
-	<hr/>
-	<form:form action="" modelAttribute="account" method="post">
-	
-		<p>用户名：<form:input path="username"/></p>
-		<p>密码：<form:input type="password" path="password" /></p>
-		<p><input type="submit" value="登录"/>
-		
-	
-	</form:form>
+	<h2>error!!!</h2>
 	
 </body>
 </html>

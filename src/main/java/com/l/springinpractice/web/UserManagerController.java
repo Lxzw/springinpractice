@@ -40,6 +40,7 @@ public class UserManagerController {
 	
 	private Customer customer = new Customer();
 	
+	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public ModelAndView viewRegisterPage(ModelMap model) {
 		return new ModelAndView("user/register").addObject(customer);
